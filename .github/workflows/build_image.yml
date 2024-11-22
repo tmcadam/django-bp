@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - development
+      - main
 
 jobs:
   build-and-share:
@@ -27,6 +28,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPO_NAME }}:development
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPO_NAME }}:latest
 
 
