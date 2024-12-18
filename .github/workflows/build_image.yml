@@ -27,6 +27,5 @@ jobs:
       - name: Build and push the Docker image
         run: |
           docker build . --tag ghcr.io/${{ secrets.GCR_USERNAME }}/${{ github.event.repository.name }}:development
-          docker run ghcr.io/${{ secrets.GCR_USERNAME }}/${{ github.event.repository.name }}:development
           docker push ghcr.io/${{ secrets.GCR_USERNAME }}/${{ github.event.repository.name }}:development
           
